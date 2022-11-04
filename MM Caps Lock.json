@@ -1,0 +1,180 @@
+{
+  "title": "Caps Lock → RSI Mouse Buttons (Shift + Caps Lock for Caps Lock)",
+  "rules": [
+    {
+      "description": "Caps Lock → RSI Mouse Buttons (Shift + Caps Lock for Caps Lock)",
+      "manipulators": [
+        {"from": {"key_code": "caps_lock", "modifiers": {"optional": "caps_lock"}},
+          "to": [{"set_variable": {"name": "mouse_mode", "value": 1}}],
+          "conditions": [{"type": "variable_unless", "name": "mouse_mode", "value": 1}],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "mouse_key": {
+              "vertical_wheel": 32
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "mouse_key": {
+              "vertical_wheel": -32
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "mouse_key": {
+              "horizontal_wheel": 32
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "mouse_key": {
+              "horizontal_wheel": -32
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "pointing_button": "button1"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "pointing_button": "button3"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "pointing_button": "button2"
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mouse_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
