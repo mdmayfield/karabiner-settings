@@ -1,0 +1,40 @@
+{
+    "mapping": {
+        "1,39,1": [
+            "if_eq($mousemode, 1, set(mousemode, 0), hold_keys(KEY_SEMICOLON))",
+            "keyboard"
+        ],
+        "1,32,1": [
+            "if_eq($mousemode, 1, hold_keys(BTN_LEFT), hold_keys(d))",
+            "keyboard + mouse"
+        ],
+        "1,58,1": [
+            "if_eq($mousemode, 1, hold_keys(KEY_CAPSLOCK), set(mousemode, 1))",
+            "keyboard"
+        ],
+        "1,18,1": [
+            "if_eq($mousemode, 1, hold_keys(BTN_RIGHT), hold_keys(e))",
+            "keyboard + mouse"
+        ],
+        "1,30,1": [
+            "if_eq($mousemode, 1, hold_keys(BTN_MIDDLE), hold_keys(a))",
+            "keyboard + mouse"
+        ],
+        "1,31,1": [
+            "if_eq($mousemode, 1, wheel(up, 10), hold_keys(s))",
+            "keyboard + mouse"
+        ],
+        "1,33,1": [
+            "if_eq($mousemode, 1, wheel(down, 10), hold_keys(f))",
+            "keyboard + mouse"
+        ],
+        "1,17,1": [
+            "if_eq($mousemode, 1, wheel(left, 10), hold_keys(w))",
+            "keyboard + mouse"
+        ],
+        "1,19,1": [
+            "if_eq($mousemode, 1, wheel(right, 10), hold_keys(r))",
+            "keyboard + mouse"
+        ]
+    }
+}
