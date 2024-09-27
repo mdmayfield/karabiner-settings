@@ -1,0 +1,241 @@
+{
+  "title": "Caps Lock → RSI Mouse Buttons v2 (simplified)",
+  "rules": [
+    {
+      "description": "Caps Lock → RSI Mouse Buttons v2 (simplified)",
+      "enabled": true,
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "pointing_button": "button1",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 0
+              }
+            },
+            { "pointing_button": "button1", "modifiers": ["caps_lock"] },
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": { "mandatory": ["left_shift", "caps_lock"] }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "mandatory": "caps_lock" }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mouse_mode",
+                "value": 0
+              }
+            },
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "f",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "mouse_key": { "vertical_wheel": 32 }, "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "mouse_key": { "vertical_wheel": -32 }, "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "mouse_key": { "horizontal_wheel": 32 }, "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "r",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "mouse_key": { "horizontal_wheel": -32 }, "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": { "mandatory": "caps_lock", "optional": ["any"] }
+          },
+          "to": { "pointing_button": "button1", "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "pointing_button": "button3", "modifiers": ["caps_lock"] },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "mouse_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "e",
+            "modifiers": { "mandatory": ["caps_lock"], "optional": ["any"] }
+          },
+          "to": { "pointing_button": "button2", "modifiers": ["caps_lock"] },
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
