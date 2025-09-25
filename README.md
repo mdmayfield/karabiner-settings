@@ -64,3 +64,4 @@ Combine left-hand mouse buttons (D, E, A) and scrolling (F, S, W, R) with physic
 ### Notes
 - Holding Caps Lock with **any modifier** (Shift, Ctrl, etc.) and then releasing will **not** enter mouse mode
 - Numpad mode takes priority when Caps Lock is held, then returns to normal or mouse mode depending on previous state
+- Linux equivalent for [keyd](https://github.com/rvaiya/keyd) at https://github.com/mdmayfield/ThinkPad-T16s-Gen6-AMD/tree/main/keyd
